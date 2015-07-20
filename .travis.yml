@@ -1,0 +1,8 @@
+language: java
+jdk:
+- oraclejdk8
+before_script:
+- GOAL=verify
+- if [ "${TRAVIS_BRANCH}" = "release" && "${TRAVIS_PULL_REQUEST}" = "false" ]; then GOAL="release:prepare release:perform"; fi;
+script:
+- mvn -B -Dusername=$GH_TOKEN clean $GOAL
