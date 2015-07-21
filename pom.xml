@@ -17,7 +17,7 @@
 
 	<scm>
 		<url>https://github.com/nagaseyasuhito/mallow</url>
-		<connection>scm:git:https://${env.GH_TOKEN}@github.com/nagaseyasuhito/mallow.git</connection>
+		<connection>scm:git:https://github.com/nagaseyasuhito/mallow.git</connection>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -33,6 +33,8 @@
 		<cargo.remote.username>admin</cargo.remote.username>
 		<cargo.remote.password>passwd</cargo.remote.password>
 		<cargo.glassfish.admin.port>4848</cargo.glassfish.admin.port>
+
+		<scmCommentPrefix>[maven-release-plugin][ci skip]</scmCommentPrefix>
 	</properties>
 
 	<build>
