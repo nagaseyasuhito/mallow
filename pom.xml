@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.nagaseyasuhito</groupId>
 	<artifactId>mallow</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<issueManagement>
@@ -18,7 +18,7 @@
 	<scm>
 		<url>https://github.com/nagaseyasuhito/mallow</url>
 		<connection>scm:git:https://github.com/nagaseyasuhito/mallow.git</connection>
-		<tag>mallow-1.0.3</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
