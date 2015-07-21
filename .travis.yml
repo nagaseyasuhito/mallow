@@ -1,8 +1,11 @@
 language: java
+cache:
+  directories:
+  - $HOME/.m2
 jdk:
 - oraclejdk8
 before_script:
-- git checkout -b temporary
+- git checkout -b release
 - GOAL=verify
 - if [ "${TRAVIS_BRANCH}" = "release" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then GOAL="release:prepare release:perform"; fi;
 script:
