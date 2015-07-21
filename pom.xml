@@ -17,7 +17,7 @@
 
 	<scm>
 		<url>https://github.com/nagaseyasuhito/mallow</url>
-		<connection>scm:git:https://${env.GH_TOKEN}@github.com/nagaseyasuhito/chrysantha.git</connection>
+		<connection>scm:git:https://${env.GH_TOKEN}@github.com/nagaseyasuhito/mallow.git</connection>
 		<tag>HEAD</tag>
 	</scm>
 
