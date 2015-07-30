@@ -1,9 +1,11 @@
 language: java
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk7
 cache:
   directories:
   - $HOME/.m2
-jdk:
-- oraclejdk8
 before_script:
 - GOAL=verify
 - if [ "${TRAVIS_BRANCH}" = "release" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then GOAL="release:prepare release:perform"; git checkout release; fi;
