@@ -13,4 +13,3 @@ before_script:
 
 script:
   - mvn -B -Dusername=$GH_TOKEN clean $GOAL
-  - mvn -B -Dusername=$GH_TOKEN clean $GOAL
