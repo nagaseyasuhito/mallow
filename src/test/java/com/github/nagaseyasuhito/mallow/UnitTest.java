@@ -6,6 +6,7 @@ public class UnitTest {
 
 	@Test
 	public void test() {
-		System.out.println("This is unit test.");
+		throw new RuntimeException();
+		// System.out.println("This is unit test.");
 	}
 }
