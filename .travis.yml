@@ -15,7 +15,10 @@ script:
   - mvn -B -Dusername=$GH_TOKEN clean $GOAL
 
 after_sccess:
-  - echo "GOOD NICE!"
+  - mvn clean
 
 after_failure:
-  - echo "BAD UNPLEASANT!"
+  - mvn -V
+
+after_script:
+  - mvn compile
