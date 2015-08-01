@@ -12,4 +12,4 @@ before_script:
   - if [ "${TRAVIS_BRANCH}" = "release" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then GOAL="release:prepare release:perform"; git checkout release; fi;
 
 script:
-  - mvn -B -Dusername=$GH_TOKEN clean $GOAL
+  - mvn -B -Dusername=$GH_TOKEN $GOAL
