@@ -14,7 +14,7 @@ before_script:
 script:
   - mvn -B -Dusername=$GH_TOKEN clean $GOAL
 
-after_sccess:
+after_success:
   - mvn clean
 
 after_failure:
