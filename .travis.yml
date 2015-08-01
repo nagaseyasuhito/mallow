@@ -13,12 +13,3 @@ before_script:
 
 script:
   - mvn -B -Dusername=$GH_TOKEN clean $GOAL
-
-after_success:
-  - mvn clean
-
-after_failure:
-  - mvn -V
-
-after_script:
-  - mvn compile
