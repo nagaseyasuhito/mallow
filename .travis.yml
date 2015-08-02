@@ -3,7 +3,9 @@ language: java
 jdk:
   - oraclejdk8
 
-cache: maven
+cache:
+  directories:
+  - $HOME/.m2
 
 before_script:
   - GOAL=verify
