@@ -6,7 +6,7 @@
 		<configuration>
 			<property name="bindHttpPort">18080</property>
 			<property name="resourcesXml">
-				src/test/resources/glassfish-resources-h2database.xml
+				src/test/resources/glassfish-resources-mysql.xml
 			</property>
 		</configuration>
 	</container>

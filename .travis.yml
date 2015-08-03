@@ -3,6 +3,9 @@ language: java
 jdk:
   - oraclejdk8
 
+services:
+  - mysql
+
 cache:
   directories:
   - $HOME/.m2
@@ -10,6 +13,6 @@ cache:
 before_script:
   - GOAL=verify
   - if [ "${TRAVIS_BRANCH}" = "release" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then GOAL="release:prepare release:perform"; git checkout release; fi;
-
+  - mysql -e "create database mallow"
 script:
   - mvn -B -Dusername=$GH_TOKEN $GOAL
