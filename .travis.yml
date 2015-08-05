@@ -1,8 +1,13 @@
 language: java
 
 jdk:
+  - openjdk7
+  - oraclejdk7
   - oraclejdk8
 
+env:
+  - GOAL=verify
+  - GOAL=package
 services:
   - mysql
 
@@ -11,7 +16,6 @@ cache:
   - $HOME/.m2
 
 before_script:
-  - GOAL=verify
   - if [ "${TRAVIS_BRANCH}" = "release" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then GOAL="release:prepare release:perform"; git checkout release; fi;
   - mysql -e "create database mallow"
 script:
