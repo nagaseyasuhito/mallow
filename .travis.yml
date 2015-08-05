@@ -7,7 +7,7 @@ jdk:
 
 env:
   - GOAL=verify
-  - GOAL=package
+
 services:
   - mysql
 
@@ -18,5 +18,6 @@ cache:
 before_script:
   - if [ "${TRAVIS_BRANCH}" = "release" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then GOAL="release:prepare release:perform"; git checkout release; fi;
   - mysql -e "create database mallow"
+
 script:
   - mvn -B -Dusername=$GH_TOKEN -Darquillian.launch=glassfish-embedded-mysql $GOAL
