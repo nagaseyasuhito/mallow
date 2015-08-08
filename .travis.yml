@@ -8,9 +8,6 @@ jdk:
 env:
   - GOAL=verify
 
-services:
-  - mysql
-
 cache:
   directories:
   - $HOME/.m2
